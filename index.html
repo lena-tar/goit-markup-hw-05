@@ -570,29 +570,24 @@
         </div>
         <div class="subscribe">
           <form class="footer-form">
-            <label class="footer-form-field">
-              Subscribe
-              <input
-                class="footer-form-input"
-                type="email"
-                name="subscribe-email"
-                placeholder="Email"
-              />
-              <button class="footer-form-btn" type="submit">
+            <div class="footer-mail-box">
+              <label class="footer-form-field">
                 Subscribe
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M24 2L0 13.25L7.66994 15.6172L19.5 6.375L10.5017 16.4913L10.509 16.4936L10.5 16.4913V22L14.8013 17.8183L20.2501 19.5L24 2Z"
-                    fill="white"
-                  />
-                </svg>
-              </button>
+                <input
+                  class="footer-form-input"
+                  type="email"
+                  name="subscribe-email"
+                  placeholder="E-mail"
+                />
+            </div>
+              <div class="button-box">
+                <button class="footer-form-btn" type="submit">
+                  Subscribe
+                  <svg class="subscribe-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-subscribe"></use>
+                  </svg>
+                </button>
+              </div>
             </label>
           </form>
         </div>
@@ -601,7 +596,80 @@
 
     <!--Modal window-->
     <div class="backdrop">
-      <div class="modal"></div>
+      <div class="modal">        
+        <button class="close-btn" type="button">
+          <svg class="modal-btn-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <p class="modal-caption">Leave your contacts and we will call you back</p>
+
+        <form class="modal-form" name="review">
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="user-name">Name</label>
+            <div class="modal-form-wrapper">
+              <input
+                class="modal-form-input"
+                type="text"
+                id="user-name"
+                name="user-name"
+              />
+              <svg class="modal-form-icon" width="12" height="12">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+ 
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="user-phone"
+              >Phone number</label
+            >
+            <div class="modal-form-wrapper">
+              <input
+                class="modal-form-input"
+                type="tel"
+                id="user-phone"
+                name="user-phone"
+              />
+              <svg class="modal-form-icon" width="13" height="13">
+                <use href="./images/icons.svg#icon-tel"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="user-email">Email</label>
+            <div class="modal-form-wrapper">
+              <input
+                class="modal-form-input"
+                type="email"
+                id="user-email"
+                name="user-email"
+              />
+              <svg class="modal-form-icon" width="16" height="12">
+                <use href="./images/icons.svg#icon-message"></use>
+              </svg>
+            </div>
+          </div>
+
+         
+
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="user-comment">Comment</label>
+            <textarea
+              class="modal-form-message"
+              id="user-comment"
+              name="user-comment"
+              rows="4"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+
+          <button class="btn btn-accent" type="submit">Send</button>
+        </form>
+      </div>
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
