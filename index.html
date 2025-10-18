@@ -569,26 +569,24 @@
           </ul>
         </div>
         <div class="subscribe">
+          <p class="footer-form-text">Subscribe</p>
           <form class="footer-form">
-            <div class="footer-mail-box">
-              <label class="footer-form-field">
-                Subscribe
-                <input
-                  class="footer-form-input"
-                  type="email"
-                  name="subscribe-email"
-                  placeholder="E-mail"
-                />
-            </div>
-              <div class="button-box">
-                <button class="footer-form-btn" type="submit">
-                  Subscribe
-                  <svg class="subscribe-icon" width="24" height="24">
-                    <use href="./images/icons.svg#icon-subscribe"></use>
-                  </svg>
-                </button>
-              </div>
+            <label class="footer-form-field">
+              <input
+                class="footer-form-input"
+                type="email"
+                name="subscribe-email"
+                placeholder="E-mail"
+              />
             </label>
+            <div class="button-box">
+              <button class="footer-form-btn" type="submit">
+                Subscribe
+                <svg class="subscribe-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-subscribe"></use>
+                </svg>
+              </button>
+            </div>
           </form>
         </div>
       </div>
@@ -596,15 +594,15 @@
 
     <!--Modal window-->
     <div class="backdrop">
-      <div class="modal">        
+      <div class="modal">
         <button class="close-btn" type="button">
           <svg class="modal-btn-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
-
-        <p class="modal-caption">Leave your contacts and we will call you back</p>
-
+        <p class="modal-caption">
+          Leave your contacts and we will call you back
+        </p>
         <form class="modal-form" name="review">
           <div class="modal-form-field">
             <label class="modal-form-label" for="user-name">Name</label>
@@ -620,7 +618,7 @@
               </svg>
             </div>
           </div>
- 
+
           <div class="modal-form-field">
             <label class="modal-form-label" for="user-phone"
               >Phone number</label
@@ -653,21 +651,42 @@
             </div>
           </div>
 
-         
-
           <div class="modal-form-field">
             <label class="modal-form-label" for="user-comment">Comment</label>
-            <textarea
-              class="modal-form-message"
-              id="user-comment"
-              name="user-comment"
-              rows="4"
-              placeholder="Text input"
-            ></textarea>
+            <div class="comment">
+              <textarea
+                class="modal-form-comment"
+                id="user-comment"
+                name="user-comment"
+                rows="5"
+                placeholder="Text input"
+              ></textarea>
+            </div>
           </div>
 
-          <button class="btn btn-accent" type="submit">Send</button>
+          <div class="box-checkbox">
+            <input
+              class="checkbox visually-hidden"
+              type="checkbox"
+              name="user-agree"
+              id="user-agree"
+              value="true"
+              checked
+            />
+            <label class="agree-wrapper" for="user-agree"
+              ><span class="agree-checkbox">
+                <svg class="agree-checkbox-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-agree"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a href="./index.html" target="_blank" class="link-agree"
+                >Privacy Policy</a
+              ></label
+            >
+          </div>
         </form>
+        <button class="send-btn" type="submit">Send</button>
       </div>
     </div>
     <script src="./js/modal.js"></script>
